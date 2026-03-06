@@ -1,0 +1,116 @@
+/* Custom styles for Santa Cruz Council Rankings website */
+
+/* Smooth transitions */
+.category-btn {
+    transition: all 0.3s ease;
+}
+
+.member-card {
+    transition: all 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+}
+
+.score-badge {
+    transition: all 0.2s ease;
+}
+
+.score-badge:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox animations */
+#lightbox {
+    transition: opacity 0.3s ease;
+}
+
+#lightbox.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#lightbox:not(.hidden) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#lightbox .bg-white {
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+}
+
+#lightbox:not(.hidden) .bg-white {
+    transform: scale(1);
+}
+
+/* Score colors - Black, Red, Orange, Yellow, Blue, Green */
+/* Green only for 100% perfect scores */
+.score-0 { background-color: #000000; } /* Black: 0-20% */
+.score-1 { background-color: #ef4444; } /* Red: 20-40% */
+.score-2 { background-color: #f97316; } /* Orange: 40-60% */
+.score-3 { background-color: #eab308; } /* Yellow: 60-80% */
+.score-4 { background-color: #3b82f6; } /* Blue: 80-100% */
+.score-5 { background-color: #10b981; } /* Dark Green: 100% only */
+
+/* Chart container responsive */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Fix for potential infinite space issue */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
+}
+
+main {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Ensure charts don't overflow */
+canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+/* Prevent chart containers from expanding */
+.chart-container canvas {
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .member-card {
+        margin-bottom: 1rem;
+    }
+    
+    .category-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}

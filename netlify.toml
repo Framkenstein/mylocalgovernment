@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+  command = "echo 'No build step required'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/santa-cruz-city/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/santa-cruz-city"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
