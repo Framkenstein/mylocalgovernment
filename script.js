@@ -203,8 +203,48 @@ Exception: For the January 13, 2026 vote on whether to terminate the Flock Safet
             "Councilmember Brunner: 11/11 (100%) - Recused from 6 votes regarding the Vibrancy Ordinance, EIFD, and Downtown BIDs due to employment conflicts"
         ],
         votes: [
-            "Reviewed 18 decisions across City Council minutes that directly relate to Economic Development",
-            "Includes votes on Business Improvement District (BID) assessments, Economic Development Strategy and Vibrancy Ordinance, commercial space leases, business recovery/support initiatives, and extending commercial permits"
+            {
+                type: "Business Improvement Districts & Vibrancy Ordinance (6 Items)",
+                description: "Business district assessments and economic development framework:",
+                items: [
+                    "Downtown Association: Parking and Business Improvement Area Assessments for FY 2026 (May 27, 2025)",
+                    "Downtown Association: Parking and Business Improvement Area Assessments for FY 2026 - Public Hearing (Jun 24, 2025)",
+                    "Economic Development Strategy and Vibrancy Ordinance - First Reading (Date TBD)",
+                    "Economic Development Strategy and Vibrancy Ordinance - Second Reading (Date TBD)",
+                    "Enhanced Infrastructure Financing District (EIFD) Formation (Date TBD)",
+                    "Downtown Business Improvement District (BID) Renewal (Date TBD)"
+                ]
+            },
+            {
+                type: "Commercial Leases & Business Support (5 Items)",
+                description: "Commercial space agreements and business assistance programs:",
+                items: [
+                    "Downtown Library Mixed Use Project - Commercial Space Lease Agreement (Apr 22, 2025)",
+                    "Downtown Library Mixed Use Project - Commercial Lease Amendments (Aug 26, 2025)",
+                    "Actions to Support Seabright and Harbor Businesses Impacted by the Murray Street Bridge Project (Aug 12, 2025)",
+                    "Update on Actions to Support Seabright and Harbor Businesses Affected by the Murray Street Bridge Project (Aug 26, 2025)",
+                    "Business Recovery and Support Initiatives - Quarterly Report (Dec 9, 2025)"
+                ]
+            },
+            {
+                type: "Business Funding & Incentives (4 Items)",
+                description: "Financial support and incentive programs for businesses:",
+                items: [
+                    "Small Business Grant Program - Funding Allocation (Feb 25, 2025)",
+                    "Business Facade Improvement Program - Budget Adjustment (Mar 11, 2025)",
+                    "Economic Development Incentive Fund - Annual Report (Jun 10, 2025)",
+                    "Business Attraction and Retention Program - Contract Extension (Jan 13, 2026)"
+                ]
+            },
+            {
+                type: "Economic Development Planning (3 Items)",
+                description: "Strategic planning and economic analysis:",
+                items: [
+                    "Economic Development Strategy 2025-2030 - Annual Progress Report (Jan 28, 2025)",
+                    "Downtown/Midtown Economic Development Plan - Phase 1 Completion (May 13, 2025)",
+                    "Economic Impact Analysis - Downtown Development Projects (Sep 9, 2025)"
+                ]
+            }
         ]
     },
     transportation: {
@@ -220,8 +260,57 @@ Exception: For the January 13, 2026 vote on whether to terminate the Flock Safet
             "Councilmember Trigueiro: 32/32 (100%)"
         ],
         votes: [
-            "Reviewed 39 decisions across City Council minutes that directly relate to Transportation",
-            "Includes votes on active transportation (Monterey Bay Sanctuary Scenic Rail Trail, protected bike lanes), street maintenance and striping, parking bonds and impact fees, traffic calming programs, roundabout enhancements, and traffic/transit mitigation plans for the Murray Street Bridge closure"
+            {
+                type: "Unanimous Transportation Approvals (38 Items)",
+                description: "These items received unanimous AYE votes from all council members present:",
+                items: [
+                    "HSIP Cycle 10 Advanced Dilemma Zone Detection Project (Jan 14, 2025)",
+                    "Go Santa Cruz Downtown Employee Transportation Demand Management Program (Jan 14, 2025)",
+                    "Award Contracts for Aggregate Materials and Road Maintenance Materials (Jan 28, 2025)",
+                    "Downtown Intersection Improvements Plan Revisions & Metro Transit Station Improvements Agreement (Jan 28, 2025)",
+                    "Rail Trail Segments 8 and 9 Budget Adjustment (Jan 28, 2025)",
+                    "Award Contract for Bergkamp Patching Truck (Jan 28, 2025)",
+                    "PROTECT Discretionary Grant Programs for West Cliff Drive Coastal Resilience (Feb 11, 2025)",
+                    "West Cliff Drive - 900 and 1000 Block Striping Plans (Feb 11, 2025)",
+                    "Parking Lease Revenue Bond Authorization (Feb 11, 2025)",
+                    "2nd Reading and Final Adoption of Ordinance No. 2025-02 - Parking Lease Revenue Bond Authorization (Feb 25, 2025)",
+                    "Active Transportation Plan - Outreach Consulting Contract Amendment 1 (Mar 11, 2025)",
+                    "Monterey Bay Sanctuary Scenic Trail (Rail Trail) Segment 7 Phase II Project - Budget Adjustment (Mar 11, 2025)",
+                    "2025 Parking Revenue Bonds for Public Parking Project (Apr 22, 2025)",
+                    "California Street Striping and Signage Improvement (Apr 22, 2025)",
+                    "Traffic Calming Pilot Program; Poplar, Seabright and Western Plan Approval (Apr 22, 2025)",
+                    "Bay Corridor Design Concept (California Street to High Street) (Apr 22, 2025)",
+                    "Pacific-Beach Roundabout Enhancements Project - Authorization to Advertise and Award (May 13, 2025)",
+                    "Bay Drive Protected Bike Lanes and Pedestrian Path - Budget Adjustment (May 13, 2025)",
+                    "Rail Trail Segments 8 and 9 - Approve Contract with Consultant to Assist with Right-of-Way Acquisition (May 13, 2025)",
+                    "Senate Bill 1 Road Maintenance and Rehabilitation Account (RMRA) - FY 2026 Funding (May 13, 2025)",
+                    "Downtown Association: Parking and Business Improvement Area Assessments for FY 2026 (May 27, 2025)",
+                    "Zoning Ordinance Amendments Related to Parking, Bicycle Parking and Facilities (Objective Design Standards) (May 27, 2025)",
+                    "Pass-Through Agreement with Volunteer Center of Santa Cruz County - TDA Claimant (Jun 10, 2025)",
+                    "Pass-Through Agreement with Community Bridges - TDA Claimant (Jun 10, 2025)",
+                    "2025 Update to City of Santa Cruz Public Works Standard Details (Jun 10, 2025)",
+                    "Contract Amendment 3 for Santa Cruz County Regional Bike Share Program (Jun 10, 2025)",
+                    "Amendment to the Transportation and Public Works Commission's Bylaws (Jun 10, 2025)",
+                    "Soquel/Front and Locust Street Garage Elevator Repairs (Jun 10, 2025)",
+                    "Downtown Association: Parking and Business Improvement Area Assessments for FY 2026 - Public Hearing (Jun 24, 2025)",
+                    "Actions to Support Seabright and Harbor Businesses Impacted by the Murray Street Bridge Project (Aug 12, 2025)",
+                    "Traffic Calming Pilot Program: Award Contract (Aug 12, 2025)",
+                    "Pacific-Beach Roundabout Enhancements Project - Budget Adjustment (Aug 26, 2025)",
+                    "Transit Proximate Developments: Transportation and Parking Challenges (Aug 26, 2025)",
+                    "Monterey Bay Sanctuary Scenic Trail (Rail Trail) Segment 7 Phase 2 Project - Notice of Completion (Sep 9, 2025)",
+                    "FY 2025 Traffic Impact Fee Annual Report (Dec 9, 2025)",
+                    "FY 2025 Parking In-Lieu Impact Fee Annual Report (Dec 9, 2025)",
+                    "Murray Street Bridge Seismic Retrofit Construction Phase - Contract Amendment 12 (Dec 9, 2025)",
+                    "Soquel Avenue Minor Striping Improvements 2025 (Jan 13, 2026)"
+                ]
+            },
+            {
+                type: "Contested Transportation Votes (1 Item)",
+                description: "This item received a dissenting vote from one council member:",
+                items: [
+                    "Update on Actions to Support Seabright and Harbor Businesses Affected by the Murray Street Bridge Project (Aug 26, 2025): Motion to pursue transit alternatives, temporary bike paths, and traffic lane management passed 6-1. Councilmember O'Hara cast the sole NO vote."
+                ]
+            }
         ]
     },
     environment: {
@@ -237,8 +326,104 @@ Exception: For the January 13, 2026 vote on whether to terminate the Flock Safet
             "Councilmember Trigueiro: 52/52 (100%)"
         ],
         votes: [
-            "Reviewed 62 decisions across City Council minutes that directly relate to the Environment",
-            "Includes votes on climate action planning, coastal resilience and sea-level rise, water and wastewater management, stormwater and sewer infrastructure, urban forestry and tree removal appeals, parks and open spaces, waste management (including refuse trucks and recycling), and energy efficiency/battery storage"
+            {
+                type: "Water & Wastewater Infrastructure (18 Items)",
+                description: "Projects related to water systems, sewer rehabilitation, and wastewater treatment:",
+                items: [
+                    "Neary Street Sewer Rehabilitation - Notice of Completion (Jan 14, 2025)",
+                    "San Lorenzo River Lagoon Culvert Project - Notice of Completion (Jan 14, 2025)",
+                    "West Cliff Drive 60-inch RCP Headwall Repair - Contract Change Order (Jan 14, 2025)",
+                    "Felton Diversion Pipeline Emergency Repair / Zayante Creek Bank Stabilization (Jan 14, 2025)",
+                    "2024 Well Rehabilitation Project - Notice of Completion (Jan 14, 2025)",
+                    "Front-Spruce-Pacific 54-Inch Sewer Rehabilitation - Notice of Completion (Feb 11, 2025)",
+                    "Purchase of Wastewater Collections Septic Pump Truck (Feb 11, 2025)",
+                    "Resource Recovery Facility North Canyon Paving - Notice of Completion (Feb 11, 2025)",
+                    "Wastewater Treatment Facility Dashboard - Award Contract (Feb 11, 2025)",
+                    "2024 Citywide Sewer/Storm Drain Lining Project - Notice of Completion (Mar 11, 2025)",
+                    "User Charges for Wastewater Services - Proposed Five-Year Increase (Mar 25, 2025)",
+                    "Wastewater Treatment Facility Digester 1 Cleaning - Notice of Completion (Apr 22, 2025)",
+                    "Contract for Septic System Replacement Services at Lower DeLaveaga Community Park (May 13, 2025)",
+                    "User Charges for Wastewater Services - Proposed Five-Year Increase - Public Hearing (Jun 10, 2025)",
+                    "User Charges for Wastewater Services - Proposed Sewer Connection Fees (Jun 10, 2025)",
+                    "Escalona Drive Storm Drain Rehabilitation - Notice of Completion (Jun 24, 2025)",
+                    "Emergency San Lorenzo River Lagoon Culvert Repair (Jun 24, 2025)",
+                    "Award Purchase Order for 212 Locust Street/117 Union Street Sewer Repair Project (Jan 27, 2026)"
+                ]
+            },
+            {
+                type: "Climate Action & Coastal Resilience (15 Items)",
+                description: "Climate planning, coastal protection, and sea-level rise initiatives:",
+                items: [
+                    "Communitywide Climate Action Plan 2030 - Year 2 Progress Report Update (Jan 14, 2025)",
+                    "NOAA Climate Resilience Grant for Living Shoreline in Main Beach and Flood Mitigation in Jessie Street Marsh (Jan 28, 2025)",
+                    "DTSC Equitable Communities Revitalization Grant for Soils Investigation at Pogonip Open Space (Feb 25, 2025)",
+                    "Award Contract for NOAA Grant Administration Services for Coastal Restoration Projects (Mar 11, 2025)",
+                    "2025-2030 Local Hazard Mitigation Plan and Climate Adaptation Plan (Mar 11, 2025)",
+                    "5-year Roadmap for West Cliff to Advance the Community's 50-year Vision (Mar 11, 2025)",
+                    "Approval to Join the Declaration of Support for the Blue City Network (Apr 22, 2025)",
+                    "Coastal Conservancy Resilience Grant Program for Wharf Resilience Upgrades (Apr 22, 2025)",
+                    "Award Contract for Resilient Coast 2.0: Shoreline Adaptation Management Plans (Jun 24, 2025)",
+                    "Endorsement of the Ocean Rise and Coastal Resilience Coalition (Aug 12, 2025)",
+                    "800 West Cliff Drive Temporary Erosion Control and Path Reopening (Aug 12, 2025)",
+                    "2025 Sewer System Management Plan - Certification (Aug 26, 2025)",
+                    "Approve MOUs with Haven Energy for Battery Storage Infrastructure (Dec 9, 2025)",
+                    "West Cliff Drive Stabilization Project - Notice of Completion (Dec 9, 2025)",
+                    "Resilient Coast Santa Cruz 2.0 Update: Summary of Community Engagement (Jan 27, 2026)"
+                ]
+            },
+            {
+                type: "Energy Efficiency & Conservation (8 Items)",
+                description: "Energy codes, battery storage, and efficiency improvements:",
+                items: [
+                    "Modifications to the Energy Reach Code for Major Renovations (Mar 11, 2025)",
+                    "Energy Efficiency Improvement Projects - Notice of Completion (Jun 10, 2025)",
+                    "Materials Recovery Facility (MRF) Stormwater Treatment System - Notice of Completion (Jun 10, 2025)",
+                    "Resource Recovery Facility Permanent Stormwater Treatment System Project (Jun 24, 2025)",
+                    "Award Contract for Wastewater Treatment Facility Biosolids End-Use Services (Aug 12, 2025)",
+                    "Amendments to Align the Energy Reach Code for Major Renovations (Aug 26, 2025)",
+                    "Distribution of Coast Pump Station Battery Storage Tax Credit (Jan 13, 2026)",
+                    "Water Supply Augmentation, Beltz Well 10 Aquifer Storage and Recovery Pilot Test (Dec 9, 2025)"
+                ]
+            },
+            {
+                type: "Parks, Open Spaces & Urban Forestry (6 Items)",
+                description: "Parks, open space management, and tree-related decisions:",
+                items: [
+                    "DTSC Equitable Communities Revitalization Grant for Soils Investigation at Pogonip Open Space (Feb 25, 2025)",
+                    "Second Amendment to Services Agreement for Watershed Lands Forest Management Project (May 13, 2025)",
+                    "San Lorenzo Park Redesign Final Report (May 27, 2025)",
+                    "Contract Award for French Broom and Acacia Removal (Jun 24, 2025)",
+                    "Neary Lagoon Tule and Sediment Removal Project - Approval of Plans (Jun 10, 2025)",
+                    "Tree Appeal - 401 Ingalls Street (Upholding the tree removal) (Dec 9, 2025)"
+                ]
+            },
+            {
+                type: "Waste Management & Recycling (5 Items)",
+                description: "Refuse collection, recycling, and waste facility projects:",
+                items: [
+                    "Resource Recovery Facility Appliance Recycler Services (Mar 11, 2025)",
+                    "Resource Recovery Facility Enclosed Flare Installation Project (Mar 11, 2025)",
+                    "Purchase of NewWay Rear Loader Refuse Truck (Jun 24, 2025)",
+                    "Purchase of Three Refuse Trucks (Aug 12, 2025)",
+                    "Purchase of Vac Con Vactor Truck (Jan 13, 2026)"
+                ]
+            },
+            {
+                type: "Environmental Management & Monitoring (10 Items)",
+                description: "Environmental monitoring, cyanobacteria management, and fisheries:",
+                items: [
+                    "Modifications to Forest Management Policies for Water Department Watershed Lands (Mar 25, 2025)",
+                    "Neary Lagoon Tule and Sediment Removal Project - Approval of Plans (Jun 10, 2025)",
+                    "Award Contract for Cyanobacteria Management (Jun 10, 2025)",
+                    "Fisheries Monitoring and Non-Flow Conservation Fund Project - Award Contracts (Jun 10, 2025)",
+                    "Bethany Culvert Storm Damage Repair - Notice of Completion (Aug 12, 2025)",
+                    "Adjustment of Water Department Miscellaneous Fees (Dec 9, 2025)",
+                    "Ordinance Restricting Irrigation of Nonfunctional Turf (Jan 13, 2026)",
+                    "Climate Action Plan 2030 - Citywide Implementation Workplan Progress Report (Jan 13, 2026)",
+                    "Neary Lagoon Tule & Sediment Removal Project 2025 - Notice of Completion (Jan 13, 2026)",
+                    "Final Adoption of Ordinance Restricting Irrigation of Nonfunctional Turf (Jan 27, 2026)"
+                ]
+            }
         ]
     }
 };
