@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Local Government.com - Santa Cruz City</title>
+    <title>About - My Local Government.com</title>
     <link rel="icon" type="image/png" href="Logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50">
@@ -14,17 +13,17 @@
     <nav class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex items-center space-x-8">
+                <div class="flex items-center">
                     <a href="about.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                         <img src="Logo.png" alt="My Local Government" class="h-8 w-8 rounded">
-                        <h1 class="text-xl font-semibold text-gray-900">My Local Government</h1>
+                        <h1 class="text-xl font-bold text-gray-900">My Local Government</h1>
                     </a>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:space-x-8">
-                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    <a href="about.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                         About
                     </a>
-                    <a href="/scorecard" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    <a href="/scorecard" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                         Scorecard
                     </a>
                     <a href="budget.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
@@ -36,168 +35,103 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <!-- Header -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Santa Cruz City Council Scorecards</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                Performance rankings based on voting records - Powered by My Local Government.com
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Making Democracy Readable</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                There is a fundamental paradox in American politics: the level of government that impacts our daily lives the most is the one we pay the least attention to.
             </p>
         </div>
 
-        <!-- Category Filters -->
-        <div class="flex flex-wrap justify-center gap-2 mb-8">
-            <button class="category-btn px-4 py-2 rounded-full bg-blue-600 text-white" data-category="all">All Categories</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="housing">Housing Development</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="safety">Public Safety</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="economy">Economic Development</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="transportation">Transportation</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300" data-category="environment">Environment</button>
+        <!-- Content Sections -->
+        <div class="prose prose-lg max-w-none space-y-8">
+            <!-- Local Impact Section -->
+            <section class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">The Local Impact Paradox</h2>
+                <p class="text-gray-700 mb-4">
+                    While national elections dominate the news, it is your local city council that decides whether an affordable housing project gets built, how much funding goes to public safety, whether your street gets a bike lane, and how high your local taxes will be. Yet, despite this massive local impact, voter engagement remains shockingly low. According to the Who Votes for Mayor project by Portland State University, turnout for local elections in many U.S. cities regularly hovers between just 15% and 20%.
+                </p>
+                <p class="text-gray-700">
+                    Why? Because paying attention to local government is exhausting.
+                </p>
+            </section>
+
+            <!-- Transparency Section -->
+            <section class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">The Illusion of Transparency</h2>
+                <p class="text-gray-700 mb-4">
+                    City halls often claim to be "transparent" because they publish their records online. But uploading a dense, 500-page PDF of a city budget or a 200-page meeting agenda isn't true transparency—it's compliance.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    Public policy researchers refer to this as an "administrative burden." When information is technically public but practically impossible to read without spending a dozen hours a week deciphering legal and procedural jargon, the average working citizen is locked out of the process.
+                </p>
+                <p class="text-gray-700">
+                    This creates an environment where only paid lobbyists, special interest groups, and political insiders have the time to understand what elected officials are actually doing. Candidates can campaign on promises to fix the housing crisis or protect the environment, but once in office, their actual voting records and budget decisions vanish into the bureaucratic machinery.
+                </p>
+            </section>
+
+            <!-- Mission Section -->
+            <section class="bg-blue-50 rounded-lg p-8 border border-blue-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Mission: Data Over Rhetoric</h2>
+                <p class="text-gray-700 mb-4">
+                    The philosophy behind MyLocalGovernment.com is simple: an informed democracy requires accessible data. We are building tools to strip away the administrative burden of local civics, allowing residents to judge their representatives on their actions, not their campaign slogans.
+                </p>
+                <p class="text-gray-700">
+                    We focus on the two most objective measures of government action:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-white rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">The Roll Call (How they vote)</h3>
+                        <p class="text-gray-700">
+                            We track council votes on core community issues—Housing, Environment, Public Safety, Transportation, and Economic Development. By categorizing these votes and calculating a simple "Alignment Score," we provide a clear percentage showing how often an official actually votes for the policies they promised.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">The Ledger (How they spend)</h3>
+                        <p class="text-gray-700">
+                            Policy is meaningless without funding. As the Urban Institute notes, state and local governments are the primary drivers of infrastructure and public service spending in the U.S. Our fiscal portal translates complex municipal budgets into plain English, so you can see exactly where your tax dollars are going.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Santa Cruz Section -->
+            <section class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Starting in Santa Cruz</h2>
+                <p class="text-gray-700 mb-4">
+                    We are piloting this platform in Santa Cruz, California. With a current municipal operating budget of $147 million ($2,262 per resident) and a highly engaged community facing complex challenges around housing and environmental sustainability, Santa Cruz is the perfect proving ground.
+                </p>
+                <p class="text-gray-700">
+                    If we can build a system that accurately and fairly translates the complexities of Santa Cruz politics into clear scorecards and budget dashboards, we can scale this model to any city in the country.
+                </p>
+            </section>
+
+            <!-- Bottom Line Section -->
+            <section class="bg-gray-900 text-white rounded-lg p-8">
+                <h2 class="text-2xl font-bold mb-4">The Bottom Line</h2>
+                <p class="text-gray-300">
+                    Government data belongs to the public. You shouldn't need a law degree or a background in finance to know if your city council member is doing a good job. By organizing the data and making it readable, we aim to level the playing field, increase local voter engagement, and finally hold local government accountable to the people it serves.
+                </p>
+            </section>
         </div>
 
-        <!-- Voting Details Section -->
-        <div id="votingDetails" class="hidden bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4" id="votingTitle">Category Voting Details</h3>
-            <div id="votingContent" class="space-y-4">
-                <!-- Voting details will be populated by JavaScript -->
-            </div>
-        </div>
-
-        <!-- Council Members Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="membersGrid">
-            <!-- Members will be populated by JavaScript -->
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <a href="/scorecard" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors mr-4">
+                View Santa Cruz Scorecards →
+            </a>
+            <a href="budget.html" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors">
+                View Budget Overview →
+            </a>
         </div>
     </main>
 
-    <!-- Methodology Section -->
-    <section class="bg-gray-50 py-16">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">How We Calculate the Scores</h2>
-                <p class="text-gray-600">
-                    Our system shows how often council members vote FOR policies that advance Santa Cruz's goals.
-                </p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-                <h3 class="text-xl font-semibold text-blue-900 mb-4">The Scoring Formula</h3>
-                <p class="text-gray-700 mb-4">
-                    We calculate a score for each category based on voting records:
-                </p>
-                <div class="bg-blue-50 p-4 rounded-lg border-2 border-blue-200 text-center">
-                    <div class="text-2xl font-mono font-bold text-blue-600">
-                        Score = Pro Votes / Total Votes Present
-                    </div>
-                </div>
-                <p class="text-gray-600 mt-4 text-sm">
-                    Example: 13 pro votes out of 15 total votes present = 13/15 = 0.87 (87% alignment)
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-green-50 border border-green-200 rounded-lg p-6">
-                    <h4 class="text-lg font-semibold text-green-900 mb-3">Pro Votes</h4>
-                    <p class="text-green-800 text-sm">
-                        "Yes" votes on policies that advance the category goal (e.g., new housing projects for Housing category).
-                    </p>
-                </div>
-
-                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                    <h4 class="text-lg font-semibold text-red-900 mb-3">Against Votes</h4>
-                    <p class="text-red-800 text-sm">
-                        "No" votes on policies that advance the category goal, or "Yes" votes on restrictive policies.
-                    </p>
-                </div>
-
-                <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                    <h4 class="text-lg font-semibold text-purple-900 mb-3">Fairness</h4>
-                    <p class="text-purple-800 text-sm">
-                        Only votes where members were present count. Absences don't hurt scores - they just reduce the total possible points.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
-                <h4 class="text-lg font-semibold text-gray-900 mb-4">Color Coding (20% Ranges)</h4>
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
-                    <div class="text-center">
-                        <div class="w-8 h-8 bg-black rounded-full mx-auto mb-2"></div>
-                        <p class="text-xs text-gray-700">0-20%</p>
-                        <p class="text-xs text-gray-500">Needs Work</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-8 h-8 bg-red-500 rounded-full mx-auto mb-2"></div>
-                        <p class="text-xs text-gray-700">20-40%</p>
-                        <p class="text-xs text-gray-500">Poor</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2"></div>
-                        <p class="text-xs text-gray-700">40-60%</p>
-                        <p class="text-xs text-gray-500">Fair</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-8 h-8 bg-yellow-400 rounded-full mx-auto mb-2"></div>
-                        <p class="text-xs text-gray-700">60-80%</p>
-                        <p class="text-xs text-gray-500">Good</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
-                        <p class="text-xs text-gray-700">80-100%</p>
-                        <p class="text-xs text-gray-500">Strong</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-8 h-8 bg-green-700 rounded-full mx-auto mb-2"></div>
-                        <p class="text-xs text-gray-700">100%</p>
-                        <p class="text-xs text-gray-500">Perfect</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                <h4 class="text-lg font-semibold text-gray-900 mb-4">Scoring Categories</h4>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <h5 class="font-medium text-gray-900 mb-2">Housing Development</h5>
-                        <p class="text-gray-600 text-sm">Support for new housing, zoning reforms, and affordable housing initiatives.</p>
-                    </div>
-                    <div>
-                        <h5 class="font-medium text-gray-900 mb-2">Public Safety</h5>
-                        <p class="text-gray-600 text-sm">Funding for police, fire, emergency services, and community safety programs.</p>
-                    </div>
-                    <div>
-                        <h5 class="font-medium text-gray-900 mb-2">Economic Development</h5>
-                        <p class="text-gray-600 text-sm">Support for business growth, job creation, and economic vitality.</p>
-                    </div>
-                    <div>
-                        <h5 class="font-medium text-gray-900 mb-2">Transportation</h5>
-                        <p class="text-gray-600 text-sm">Infrastructure improvements, bike lanes, public transit, and mobility solutions.</p>
-                    </div>
-                    <div class="md:col-span-2">
-                        <h5 class="font-medium text-gray-900 mb-2">Environment</h5>
-                        <p class="text-gray-600 text-sm">Climate action, conservation, sustainability initiatives, and environmental protection.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 My Local Government.com. Making democracy readable, one city at a time.</p>
         </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 id="modalTitle" class="text-xl font-semibold text-gray-900"></h3>
-                    <button id="closeModal" class="text-gray-400 hover:text-gray-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div id="modalContent"></div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    </footer>
 </body>
 </html>
