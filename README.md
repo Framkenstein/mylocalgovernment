@@ -54,10 +54,10 @@ We're launching in Santa Cruz, California - the perfect proving ground:
 ## 🚀 Technology Stack
 
 - **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
-- **Data Analysis**: Jupyter Notebook for voting data processing
+- **Data Analysis**: NotebookLM for voting data processing
 - **Deployment**: Netlify (auto-deploy from GitHub)
 - **Domain**: mylocalgovernment.com
-- **Version Control**: Git/GitHub (private repository)
+- **Version Control**: Git/GitHub
 
 ## 📊 Data Sources
 
@@ -72,7 +72,7 @@ We're launching in Santa Cruz, California - the perfect proving ground:
 - **About**: [mylocalgovernment.com/about](https://mylocalgovernment.com/about)
 - **Scorecard**: [mylocalgovernment.com/scorecard](https://mylocalgovernment.com/scorecard)
 - **Budget Portal**: [mylocalgovernment.com/budget.html](https://mylocalgovernment.com/budget.html)
-- **GitHub**: Private repository (Framkenstein/mylocalgovernment)
+- **GitHub**: (Framkenstein/mylocalgovernment)
 
 ## 🔧 Development
 
