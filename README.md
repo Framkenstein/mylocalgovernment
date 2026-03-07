@@ -23,6 +23,12 @@ Our philosophy is simple: **Data Over Rhetoric**. We build tools to strip away t
 4. **Transportation** - Infrastructure, bike lanes, public transit, mobility
 5. **Environment** - Climate action, conservation, sustainability initiatives
 
+### Budget Portal
+- **Fiscal Transparency**: Comprehensive budget breakdowns in layperson terms
+- **Interactive Charts**: Visual representation of revenue and spending
+- **Official Sources**: Direct links to City of Santa Cruz budget documents
+- **Tax Reality Check**: Understanding where your tax dollars go
+
 ### Scoring Methodology
 ```
 Score = Pro Votes / Total Votes Present
@@ -34,7 +40,8 @@ Score = Pro Votes / Total Votes Present
 ## 🏙️ Santa Cruz Pilot
 
 We're launching in Santa Cruz, California - the perfect proving ground:
-- **Municipal Budget**: $147 million ($2,262 per resident)
+- **Total Budget**: $533.8 million for Fiscal Year 2026
+- **General Fund**: $158.9 million (completely balanced)
 - **Complex Challenges**: Housing crisis, environmental sustainability
 - **Engaged Community**: Ready for data-driven civic engagement
 
@@ -42,25 +49,28 @@ We're launching in Santa Cruz, California - the perfect proving ground:
 - **161 Council Decisions** analyzed (Jan 2025 - Jan 2026)
 - **7 Council Members** tracked across all categories
 - **100% Environment Consensus** - Unanimous support for environmental initiatives
+- **Comprehensive Budget Data** - FY 2026 financial breakdown with official sources
 
 ## 🚀 Technology Stack
 
 - **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
 - **Deployment**: Netlify (auto-deploy from GitHub)
-- **Domain**: mylocalgovernment.com/santa-cruz-city
+- **Domain**: mylocalgovernment.com
 - **Version Control**: Git/GitHub (private repository)
 
 ## 📊 Data Sources
 
 - **Official City Council Minutes** and voting records
+- **City of Santa Cruz FY 2026 Adopted Budget** documents
 - **Public Meeting Agendas** and resolutions
-- **Municipal Budget Documents** and financial reports
 - **Policy Documents** and strategic plans
 
 ## 🌐 Live Site
 
-- **URL**: [mylocalgovernment.com/santa-cruz-city](https://mylocalgovernment.com/santa-cruz-city)
+- **URL**: [mylocalgovernment.com](https://mylocalgovernment.com)
 - **About**: [mylocalgovernment.com/about](https://mylocalgovernment.com/about)
+- **Scorecard**: [mylocalgovernment.com/scorecard](https://mylocalgovernment.com/scorecard)
+- **Budget Portal**: [mylocalgovernment.com/budget.html](https://mylocalgovernment.com/budget.html)
 - **GitHub**: Private repository (Framkenstein/mylocalgovernment)
 
 ## 🔧 Development
@@ -84,22 +94,23 @@ git push
 ## 📈 Future Roadmap
 
 ### Phase 1: Santa Cruz Expansion
-- [ ] Budget Portal implementation
-- [ ] Historical voting data (2020-2024)
-- [ ] Interactive charts and visualizations
+- [x] Budget Portal implementation
+- [x] Historical voting data (2025-2026)
+- [x] Interactive charts and visualizations
 - [ ] Email alerts for important votes
+- [ ] Mobile app development
 
 ### Phase 2: Multi-City Platform
 - [ ] Additional California cities
 - [ ] Standardized data ingestion pipeline
 - [ ] City comparison tools
-- [ ] Mobile app development
+- [ ] API for civic developers
 
 ### Phase 3: National Scale
-- [ ] API for civic developers
-- [ ] Integration with civic tech platforms
 - [ ] Machine learning for trend analysis
 - [ ] Community engagement features
+- [ ] Advanced analytics dashboard
+- [ ] Civic education resources
 
 ## 🤝 Contributing
 
@@ -111,25 +122,18 @@ Future contribution areas will include:
 - **Developers**: Build new features and city modules
 - **Designers**: Improve user experience and accessibility
 
-## 📧 Contact
-
-- **Website**: [mylocalgovernment.com](https://mylocalgovernment.com)
-- **Email**: [Contact form on website]
-- **GitHub**: Issues and discussions (private repo)
-
 ## 📄 License
 
-© 2026 My Local Government.com. All rights reserved.
+ 2026 My Local Government.com. All rights reserved.
 
 ## 🎉 Acknowledgments
 
-- **Santa Cruz City Council** for transparent public records
+- **City of Santa Cruz** for transparent public records and budget documents
 - **Netlify** for hosting and deployment infrastructure
 - **Tailwind CSS** for the design system
 - **Open Source Community** for inspiration and tools
 
 ---
-
 **Government data belongs to the public. You shouldn't need a law degree or a background in finance to know if your city council member is doing a good job.**
 
 *By organizing the data and making it readable, we aim to level the playing field, increase local voter engagement, and finally hold local government accountable to the people it serves.*
