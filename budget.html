@@ -458,14 +458,20 @@
         new Chart(revenueCtx, {
             type: 'doughnut',
             data: {
-                labels: ['Sales & Use Taxes', 'Property Taxes', 'Lodging Occupancy Tax', 'Utility Users Tax', 'Other Revenue'],
+                labels: [
+                    'Sales & Use Taxes (21.4%)',
+                    'Property Taxes (19.4%)',
+                    'Lodging Occupancy Taxes (10.2%)',
+                    'Utility Users Taxes (9.7%)',
+                    'Other Revenue (39.3%)'
+                ],
                 datasets: [{
                     data: [21.4, 19.4, 10.2, 9.7, 39.3],
                     backgroundColor: [
-                        '#3B82F6',
-                        '#10B981',
-                        '#F59E0B',
-                        '#EF4444',
+                        '#2563EB',
+                        '#7C3AED',
+                        '#059669',
+                        '#EA580C',
                         '#6B7280'
                     ],
                     borderWidth: 2,
@@ -478,6 +484,26 @@
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                if (label.includes('Sales & Use Taxes')) {
+                                    return `${label} - Largest discretionary revenue source`;
+                                } else if (label.includes('Property Taxes')) {
+                                    return `${label} - City gets $16.20 of every $100 property tax`;
+                                } else if (label.includes('Lodging')) {
+                                    return `${label} - Paid by tourists`;
+                                } else if (label.includes('Utility')) {
+                                    return `${label} - Utility user fees`;
+                                } else if (label.includes('Other Revenue')) {
+                                    return `${label} - Includes Measure L & Z taxes`;
+                                }
+                                return `${label} - ${value}%`;
+                            }
+                        }
                     }
                 }
             }
@@ -488,7 +514,13 @@
         new Chart(spendingCtx, {
             type: 'doughnut',
             data: {
-                labels: ['Public Safety', 'Community Services', 'Leadership & Support', 'Community Development', 'Debt Service & Transfers'],
+                labels: [
+                    'Public Safety (41.1%)',
+                    'Community Services & Sustainable Infrastructure (23.4%)',
+                    'Leadership & Support Services (21.1%)',
+                    'Community Development (9.4%)',
+                    'Debt Service & Transfers (4.9%)'
+                ],
                 datasets: [{
                     data: [41.1, 23.4, 21.1, 9.4, 4.9],
                     backgroundColor: [
@@ -508,6 +540,26 @@
                 plugins: {
                     legend: {
                         display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed || 0;
+                                if (label.includes('Public Safety')) {
+                                    return `${label} - Police ($36.59M) & Fire ($28.77M)`;
+                                } else if (label.includes('Community Services')) {
+                                    return `${label} - Parks, Library, Public Works`;
+                                } else if (label.includes('Leadership')) {
+                                    return `${label} - City Admin, Manager, Council`;
+                                } else if (label.includes('Community Development')) {
+                                    return `${label} - Planning, Economic Development, Housing`;
+                                } else if (label.includes('Debt Service')) {
+                                    return `${label} - Debt payments & fund transfers`;
+                                }
+                                return `${label} - ${value}%`;
+                            }
+                        }
                     }
                 }
             }
