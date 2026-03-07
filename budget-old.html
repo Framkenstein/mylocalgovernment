@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Cruz Budget Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-semibold text-gray-900">Santa Cruz Council Rankings</h1>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:space-x-8">
+                    <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                        Rankings
+                    </a>
+                    <a href="budget.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                        Budget Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Fiscal Transparency Portal</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Understanding Santa Cruz city budget allocations and spending priorities.
+            </p>
+        </div>
+
+        <!-- Budget Overview Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 bg-blue-100 rounded-lg p-3">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Total Budget</h3>
+                        <p class="text-2xl font-bold text-blue-600">$147.0M</p>
+                        <p class="text-sm text-gray-500">Fiscal Year 2024-25</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 bg-green-100 rounded-lg p-3">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Per Capita</h3>
+                        <p class="text-2xl font-bold text-green-600">$2,262</p>
+                        <p class="text-sm text-gray-500">Per resident</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 bg-purple-100 rounded-lg p-3">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-semibold text-gray-900">YoY Change</h3>
+                        <p class="text-2xl font-bold text-purple-600">+4.2%</p>
+                        <p class="text-sm text-gray-500">From previous year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Breakdown Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Budget by Department</h3>
+                <div style="position: relative; height: 300px; max-height: 300px;">
+                    <canvas id="departmentChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Revenue Sources</h3>
+                <div style="position: relative; height: 300px; max-height: 300px;">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Budget Table -->
+        <div class="bg-white rounded-lg shadow overflow-hidden mb-12">
+            <div class="px-6 py-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Department Budget Breakdown</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Budget</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% of Total</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">YoY Change</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200" id="budgetTable">
+                        <!-- Table rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Links and Resources -->
+        <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Budget Documents & Resources</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://www.santacruzca.gov/Government/City-Departments/Finance/City-Budget/Previous-Budgets/Fiscal-Year-2024-Budget" target="_blank" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <span class="text-gray-700">Complete Budget Document (PDF)</span>
+                </a>
+                <a href="https://santacruz.opengov.com/transparency" target="_blank" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    <span class="text-gray-700">Financial Reports Dashboard</span>
+                </a>
+                <a href="https://www.santacruzca.gov/Government/City-Departments/Finance/City-Budget" target="_blank" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-700">Historical Budget Data</span>
+                </a>
+                <a href="mailto:citycouncil@cityofsantacruz.com" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
+                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="text-gray-700">Contact City Council</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="budget-script.js"></script>
+</body>
+</html>

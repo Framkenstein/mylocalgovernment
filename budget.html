@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santa Cruz Budget Portal</title>
+    <title>Budget Portal - My Local Government.com</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -13,12 +13,13 @@
     <nav class="bg-white shadow-sm border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <h1 class="text-xl font-semibold text-gray-900">Santa Cruz Council Rankings</h1>
+                <div class="flex items-center space-x-8">
+                    <h1 class="text-xl font-semibold text-gray-900">My Local Government</h1>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900">About</a>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:space-x-8">
                     <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                        Rankings
+                        Scorecard
                     </a>
                     <a href="budget.html" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                         Budget Portal
@@ -32,131 +33,386 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Header -->
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Fiscal Transparency Portal</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                Understanding Santa Cruz city budget allocations and spending priorities.
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Santa Cruz Budget Portal</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Making city finances readable - Where your tax dollars go in Fiscal Year 2026
             </p>
         </div>
 
-        <!-- Budget Overview Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-white rounded-lg shadow p-6">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 bg-blue-100 rounded-lg p-3">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+        <!-- Big Picture Overview -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">The Big Picture</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">$533.8 Million</div>
+                        <p class="text-gray-600">Total Budget FY 2026</p>
                     </div>
-                    <div class="ml-4">
-                        <h3 class="text-lg font-semibold text-gray-900">Total Budget</h3>
-                        <p class="text-2xl font-bold text-blue-600">$147.0M</p>
-                        <p class="text-sm text-gray-500">Fiscal Year 2024-25</p>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Operating Expenses</span>
+                            <span class="font-semibold text-blue-600">$394.3M (73.8%)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Capital Investments</span>
+                            <span class="font-semibold text-green-600">$110.2M (20.6%)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-700">Other Funds</span>
+                            <span class="font-semibold text-gray-600">$29.3M (5.5%)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-sm text-blue-800">
+                        <strong>Status Quo Budget:</strong> Modest 2.5% increases for discretionary budgets. The $158.9M General Fund is completely balanced.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- General Fund Overview -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">General Fund: $158.9 Million</h2>
+                <p class="text-gray-600 mb-6">The primary pool of money for core city services like police, fire, parks, and administration.</p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Revenue Sources -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Where the Money Comes From</h3>
+                        <canvas id="revenueChart" width="400" height="300"></canvas>
+                        <div class="mt-4 space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Sales & Use Taxes</span>
+                                <span class="font-medium">21.4%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Property Taxes</span>
+                                <span class="font-medium">19.4%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Lodging Occupancy Tax</span>
+                                <span class="font-medium">10.2%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Utility Users Tax</span>
+                                <span class="font-medium">9.7%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Other Revenue</span>
+                                <span class="font-medium">39.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Spending Categories -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Where the Money Goes</h3>
+                        <canvas id="spendingChart" width="400" height="300"></canvas>
+                        <div class="mt-4 space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Public Safety</span>
+                                <span class="font-medium">41.1% ($65.3M)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Community Services</span>
+                                <span class="font-medium">23.4% ($37.2M)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Leadership & Support</span>
+                                <span class="font-medium">21.1% ($33.5M)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Community Development</span>
+                                <span class="font-medium">9.4% ($14.9M)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Debt Service & Transfers</span>
+                                <span class="font-medium">4.9% ($7.8M)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bg-white rounded-lg shadow p-6">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 bg-green-100 rounded-lg p-3">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
+        <!-- Tax Reality Check -->
+        <section class="mb-12">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Tax Reality Check</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6 border border-yellow-300">
+                        <h3 class="font-semibold text-gray-900 mb-2">Property Tax Distribution</h3>
+                        <p class="text-3xl font-bold text-yellow-600 mb-2">$16.20</p>
+                        <p class="text-gray-600">For every $100 in property tax, the City keeps only $16.20</p>
+                        <p class="text-sm text-gray-500 mt-2">The rest goes to schools, county, and other districts</p>
                     </div>
-                    <div class="ml-4">
-                        <h3 class="text-lg font-semibold text-gray-900">Per Capita</h3>
-                        <p class="text-2xl font-bold text-green-600">$2,262</p>
-                        <p class="text-sm text-gray-500">Per resident</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow p-6">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 bg-purple-100 rounded-lg p-3">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                        </svg>
-                    </div>
-                    <div class="ml-4">
-                        <h3 class="text-lg font-semibold text-gray-900">YoY Change</h3>
-                        <p class="text-2xl font-bold text-purple-600">+4.2%</p>
-                        <p class="text-sm text-gray-500">From previous year</p>
+                    <div class="bg-white rounded-lg p-6 border border-yellow-300">
+                        <h3 class="font-semibold text-gray-900 mb-2">Sales Tax Distribution</h3>
+                        <p class="text-3xl font-bold text-yellow-600 mb-2">$0.23</p>
+                        <p class="text-gray-600">For every $1 in sales tax, the City keeps $0.23</p>
+                        <p class="text-sm text-gray-500 mt-2">The remainder goes to state and other local governments</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Budget Breakdown Charts -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white rounded-lg shadow p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Budget by Department</h3>
-                <div style="position: relative; height: 300px; max-height: 300px;">
-                    <canvas id="departmentChart"></canvas>
+        <!-- New Revenue Streams -->
+        <section class="mb-12">
+            <div class="bg-green-50 border border-green-200 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">New Revenue Streams</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6 border border-green-300">
+                        <h3 class="font-semibold text-gray-900 mb-2">Measure L</h3>
+                        <p class="text-2xl font-bold text-green-600 mb-2">½¢ Sales Tax</p>
+                        <p class="text-gray-600">Expected to generate up to $8 million annually</p>
+                        <p class="text-sm text-gray-500 mt-2">Voter-approved for maintaining financial stability</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 border border-green-300">
+                        <h3 class="font-semibold text-gray-900 mb-2">Measure Z</h3>
+                        <p class="text-2xl font-bold text-green-600 mb-2">2¢ per Ounce</p>
+                        <p class="text-gray-600">Sugar-sweetened beverage tax</p>
+                        <p class="text-sm text-gray-500 mt-2">Supports community health programs</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bg-white rounded-lg shadow p-6">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Revenue Sources</h3>
-                <div style="position: relative; height: 300px; max-height: 300px;">
-                    <canvas id="revenueChart"></canvas>
+        <!-- Capital Investments -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Capital Investment Program: $109.6 Million</h2>
+                <p class="text-gray-600 mb-6">Long-term infrastructure and community development projects</p>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">$46.5M</div>
+                        <p class="text-gray-700 font-medium">Economic Development & Housing</p>
+                        <p class="text-sm text-gray-500">42.4% of CIP budget</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">$38.6M</div>
+                        <p class="text-gray-700 font-medium">Public Works</p>
+                        <p class="text-sm text-gray-500">35.2% of CIP budget</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">$18.6M</div>
+                        <p class="text-gray-700 font-medium">Water Infrastructure</p>
+                        <p class="text-sm text-gray-500">16.9% of CIP budget</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-6 border border-blue-200">
+                    <h3 class="font-semibold text-gray-900 mb-4">Major Projects Underway</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                            <div>
+                                <p class="font-medium text-gray-900">Downtown Library & Affordable Housing</p>
+                                <p class="text-sm text-gray-600">Mixed-use development project</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                            <div>
+                                <p class="font-medium text-gray-900">La Bahia Resort & Spa</p>
+                                <p class="text-sm text-gray-600">Beachfront redevelopment</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                            <div>
+                                <p class="font-medium text-gray-900">Pacific Station North</p>
+                                <p class="text-sm text-gray-600">Transit-oriented development</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                            <div>
+                                <p class="font-medium text-gray-900">Santa Cruz Wharf Repairs</p>
+                                <p class="text-sm text-gray-600">Storm damage restoration</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Detailed Budget Table -->
-        <div class="bg-white rounded-lg shadow overflow-hidden mb-12">
-            <div class="px-6 py-4 border-b border-gray-200">
-                <h3 class="text-lg font-semibold text-gray-900">Department Budget Breakdown</h3>
+        <!-- Staffing & Operations -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">City Operations</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">975.23</div>
+                        <p class="text-gray-600">Authorized Staff Positions</p>
+                        <p class="text-sm text-gray-500 mt-2">No net increase in FY 2026</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+                            <h3 class="font-semibold text-red-900 mb-2">Rising Personnel Costs</h3>
+                            <p class="text-2xl font-bold text-red-600 mb-2">4% Increase</p>
+                            <p class="text-sm text-red-800">Driven by 9% increase in employee medical insurance and pension liabilities</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Budget</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">% of Total</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">YoY Change</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200" id="budgetTable">
-                        <!-- Table rows will be populated by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        </section>
 
-        <!-- Links and Resources -->
-        <div class="bg-blue-50 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">Budget Documents & Resources</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="https://www.santacruzca.gov/Government/City-Departments/Finance/City-Budget/Previous-Budgets/Fiscal-Year-2024-Budget" target="_blank" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    <span class="text-gray-700">Complete Budget Document (PDF)</span>
-                </a>
-                <a href="https://santacruz.opengov.com/transparency" target="_blank" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                    </svg>
-                    <span class="text-gray-700">Financial Reports Dashboard</span>
-                </a>
-                <a href="https://www.santacruzca.gov/Government/City-Departments/Finance/City-Budget" target="_blank" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span class="text-gray-700">Historical Budget Data</span>
-                </a>
-                <a href="mailto:citycouncil@cityofsantacruz.com" class="flex items-center p-3 bg-white rounded-lg shadow hover:shadow-md transition-shadow">
-                    <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                    <span class="text-gray-700">Contact City Council</span>
-                </a>
+        <!-- Economic Outlook -->
+        <section class="mb-12">
+            <div class="bg-orange-50 border border-orange-200 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Economic Outlook & Challenges</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-3">Current Challenges</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3"></div>
+                                <span>Inflation and rising interest rates</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3"></div>
+                                <span>Stock market declines affecting revenue</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3"></div>
+                                <span>Shrinking federal funding programs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3"></div>
+                                <span>4% increase in personnel costs</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-3">Long-term Strategy</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <span>Long-range financial planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <span>Full cost recovery for services</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <span>Tourism tax revenue growth expected</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
+                                <span>Revenue rebound projected by FY 2029</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-orange-100 rounded-lg border border-orange-300">
+                    <p class="text-sm text-orange-800">
+                        <strong>Projection:</strong> While spending may outpace revenues in FY 2027-2028, the City projects revenues will outpace expenses by FY 2029.
+                    </p>
+                </div>
             </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="mb-12">
+            <div class="bg-gray-900 text-white rounded-lg p-8">
+                <h2 class="text-2xl font-bold mb-6">Key Takeaways</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="font-semibold mb-2">💰 Balanced Budget</h3>
+                        <p class="text-gray-300">The $158.9M General Fund is completely balanced for FY 2026</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">🏗️ Infrastructure Focus</h3>
+                        <p class="text-gray-300">$109.6M Capital Investment Program for long-term projects</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">📈 Future Challenges</h3>
+                        <p class="text-gray-300">Status quo not sustainable - long-term planning essential</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="text-center">
+            <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                ← Back to Council Scorecards
+            </a>
         </div>
     </main>
 
-    <script src="budget-script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2026 My Local Government.com. Making democracy readable, one city at a time.</p>
+            <p class="text-sm mt-2">Budget data from City of Santa Cruz FY 2026 Adopted Budget</p>
+        </div>
+    </footer>
+
+    <script>
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Sales & Use Taxes', 'Property Taxes', 'Lodging Occupancy Tax', 'Utility Users Tax', 'Other Revenue'],
+                datasets: [{
+                    data: [21.4, 19.4, 10.2, 9.7, 39.3],
+                    backgroundColor: [
+                        '#3B82F6',
+                        '#10B981',
+                        '#F59E0B',
+                        '#EF4444',
+                        '#6B7280'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Spending Chart
+        const spendingCtx = document.getElementById('spendingChart').getContext('2d');
+        new Chart(spendingCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Public Safety', 'Community Services', 'Leadership & Support', 'Community Development', 'Debt Service & Transfers'],
+                datasets: [{
+                    data: [41.1, 23.4, 21.1, 9.4, 4.9],
+                    backgroundColor: [
+                        '#DC2626',
+                        '#059669',
+                        '#7C3AED',
+                        '#0891B2',
+                        '#EA580C'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
