@@ -54,6 +54,7 @@ We're launching in Santa Cruz, California - the perfect proving ground:
 ## 🚀 Technology Stack
 
 - **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
+- **Data Analysis**: Jupyter Notebook for voting data processing
 - **Deployment**: Netlify (auto-deploy from GitHub)
 - **Domain**: mylocalgovernment.com
 - **Version Control**: Git/GitHub (private repository)
