@@ -6,6 +6,11 @@
   NODE_VERSION = "18"
 
 [[redirects]]
+  from = "/"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
   from = "/santa-cruz-city/*"
   to = "/:splat"
   status = 200
