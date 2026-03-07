@@ -15,22 +15,42 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center space-x-8">
-                    <a href="about.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                         <img src="Logo.png" alt="My Local Government" class="h-8 w-8 rounded">
                         <h1 class="text-xl font-semibold text-gray-900">My Local Government</h1>
                     </a>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:space-x-8">
-                    <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    <a href="/about" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                         About
                     </a>
                     <a href="/scorecard" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                         Scorecard
                     </a>
-                    <a href="budget.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                    <a href="/budget" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                         Budget Portal
                     </a>
                 </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden border-t border-gray-200 bg-white hidden">
+            <div class="space-y-1 px-4 py-3">
+                <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+                    About
+                </a>
+                <a href="/scorecard" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-900 bg-blue-50">
+                    Scorecard
+                </a>
+                <a href="/budget" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+                    Budget Portal
+                </a>
             </div>
         </div>
     </nav>
@@ -198,6 +218,15 @@
         </div>
     </div>
 
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
