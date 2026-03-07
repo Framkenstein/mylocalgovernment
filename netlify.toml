@@ -6,7 +6,7 @@
   NODE_VERSION = "18"
 
 [[redirects]]
-  from = "/"
+  from = "/about"
   to = "/about.html"
   status = 200
 
